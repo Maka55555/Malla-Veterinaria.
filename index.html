@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva – Medicina Veterinaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Malla Medicina Veterinaria 👩‍⚕️💗</h1>
+    <section>
+    <h2>1° Año – 1° Semestre</h2>
+    <div class="grid">
+      <button id="biologia-celular" class="course unlocked">Biología Celular</button>
+      <button id="lab-biologia-celular" class="course unlocked">Lab. Biología Celular</button>
+      <button id="quimica-general" class="course unlocked">Química General</button>
+      <button id="fisica-medica" class="course unlocked">Física Médica</button>
+      <button id="matematicas" class="course unlocked">Matemáticas</button>
+      <button id="orientacion-profesional" class="course unlocked">Orientación Profesional</button>
+      <button id="estrategias-aprendizaje" class="course unlocked">Estrategias p/ Aprendizaje</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>1° Año – 2° Semestre</h2>
+    <div class="grid">
+      <button id="bioquimica-general" class="course" data-prereq="biologia-celular,quimica-general">Bioquímica General</button>
+      <button id="lab-bioquimica-general" class="course" data-prereq="lab-biologia-celular,quimica-general">Lab. Bioquímica General</button>
+      <button id="anatomia-vet-1" class="course" data-prereq="biologia-celular">Anatomía Vet. I</button>
+      <button id="histologia-veterinaria" class="course" data-prereq="biologia-celular">Histología Veterinaria</button>
+      <button id="zoologia" class="course" data-prereq="biologia-celular">Zoología</button>
+      <button id="bienestar-animal" class="course" data-prereq="orientacion-profesional">Bienestar Animal</button>
+      <button id="ingles-1" class="course unlocked">Inglés Instrumental I</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>2° Año – 3° Semestre</h2>
+    <div class="grid">
+      <button id="antropologia" class="course unlocked">Antropología</button>
+      <button id="ecologia" class="course" data-prereq="zoologia">Ecología</button>
+      <button id="fisiologia-animal" class="course" data-prereq="bioquimica-general,histologia-veterinaria,bienestar-animal">Fisiología Animal</button>
+      <button id="anatomia-vet-2" class="course" data-prereq="anatomia-vet-1">Anatomía Vet. II</button>
+      <button id="microbiologia-general" class="course" data-prereq="bioquimica-general">Microbiología General</button>
+      <button id="inmunologia-veterinaria" class="course" data-prereq="histologia-veterinaria,bienestar-animal">Inmunología Veterinaria</button>
+      <button id="genetica-ganadera" class="course" data-prereq="matematicas,biologia-celular">Genética Ganadera</button>
+      <button id="ingles-2" class="course" data-prereq="ingles-1">Inglés Instrumental II</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>2° Año – 4° Semestre</h2>
+    <div class="grid">
+      <button id="etica" class="course" data-prereq="antropologia">Ética</button>
+      <button id="produccion-forrajes" class="course" data-prereq="ecologia">Producción de Forrajes</button>
+      <button id="fisiopatologia-animal" class="course" data-prereq="fisiologia-animal,anatomia-vet-2,inmunologia-veterinaria">Fisiopatología Animal</button>
+      <button id="reproduccion-animal" class="course" data-prereq="fisiologia-animal,anatomia-vet-2">Reproducción Animal</button>
+      <button id="enf-parasitarias" class="course" data-prereq="zoologia">Enfermedades Parasitarias</button>
+      <button id="enf-infecciosas" class="course" data-prereq="microbiologia-general,inmunologia-veterinaria">Enfermedades Infecciosas</button>
+      <button id="patologia-general" class="course" data-prereq="fisiologia-animal,anatomia-vet-2">Patología General</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>3° Año – 5° Semestre</h2>
+    <div class="grid">
+      <button id="electivo-fils" class="course" data-prereq="etica">Electivo FILS</button>
+      <button id="nutricion" class="course" data-prereq="produccion-forrajes">Nutrición y Alimentación Animal</button>
+      <button id="patologia-especial" class="course" data-prereq="patologia-general">Patología Especial</button>
+      <button id="farmacologia-1" class="course" data-prereq="fisiopatologia-animal,enf-infecciosas">Farmacología I</button>
+      <button id="andrologia" class="course" data-prereq="fisiopatologia-animal,reproduccion-animal">Andrología</button>
+      <button id="sist-carne" class="course" data-prereq="genetica-ganadera,reproduccion-animal,bienestar-animal,produccion-forrajes">Sist. Producción de Carne</button>
+      <button id="economia" class="course" data-prereq="matematicas,produccion-forrajes">Economía</button>
+    </div>
+  </section>
+    <section>
+    <h2>3° Año – 6° Semestre</h2>
+    <div class="grid">
+      <button id="cirugia-general" class="course" data-prereq="farmacologia-1,patologia-especial">Cirugía General</button>
+      <button id="farmacologia-2" class="course" data-prereq="farmacologia-1,enf-parasitarias">Farmacología II</button>
+      <button id="sist-leche" class="course" data-prereq="nutricion,reproduccion-animal">Sist. Producción de Leche</button>
+      <button id="tec-carne" class="course" data-prereq="sist-carne">Tecnología de la Carne</button>
+      <button id="ginecologia" class="course" data-prereq="andrologia">Ginecología y Obstetricia</button>
+      <button id="contabilidad" class="course" data-prereq="economia">Contabilidad y Administración</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>4° Año – 7° Semestre</h2>
+    <div class="grid">
+      <button id="cirugia-especial" class="course" data-prereq="cirugia-general,farmacologia-2">Cirugía Especial</button>
+      <button id="exploracion-clinica" class="course" data-prereq="ginecologia,patologia-especial">Exploración Clínica</button>
+      <button id="analisis-estadistico" class="course" data-prereq="contabilidad">Análisis Estadístico</button>
+      <button id="sist-peces" class="course" data-prereq="reproduccion-animal,nutricion">Sist. Producción de Peces</button>
+      <button id="tec-leche" class="course" data-prereq="sist-leche,tec-carne">Tecnología de la Leche</button>
+      <button id="conservacion" class="course" data-prereq="ecologia">Conservación Vida Silvestre</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>4° Año – 8° Semestre</h2>
+    <div class="grid">
+      <button id="toxicologia" class="course" data-prereq="farmacologia-2">Toxicología Veterinaria</button>
+      <button id="metodos-dx" class="course" data-prereq="fisica-medica,exploracion-clinica">Métodos Complementarios Diagnóstico</button>
+      <button id="medicina-interna" class="course" data-prereq="exploracion-clinica,cirugia-especial">Medicina Interna</button>
+      <button id="metodologia" class="course" data-prereq="analisis-estadistico">Metodología Investigación</button>
+      <button id="epidemiologia" class="course" data-prereq="enf-infecciosas,analisis-estadistico">Epidemiología y Salud Pública</button>
+      <button id="formulacion" class="course" data-prereq="contabilidad">Formulación y Evaluación Proyectos</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>5° Año – 9° Semestre</h2>
+    <div class="grid">
+      <button id="clinica-exoticos" class="course" data-prereq="toxicologia,medicina-interna,metodos-dx,conservacion">Clínica Animales Silvestres</button>
+      <button id="clinica-equinos" class="course" data-prereq="toxicologia,medicina-interna,metodos-dx">Clínica Equinos y Rumiantes</button>
+      <button id="clinica-compania" class="course" data-prereq="toxicologia,medicina-interna,metodos-dx">Clínica Animales Compañía</button>
+      <button id="legislacion" class="course" data-prereq="epidemiologia">Legislación y Deontología</button>
+      <button id="memoria" class="course" data-prereq="formulacion,metodologia">Memoria de Título</button>
+      <button id="inocuidad" class="course" data-prereq="epidemiologia,tec-leche,toxicologia">Inocuidad de los Alimentos</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>5° Año – 10° Semestre</h2>
+    <div class="grid">
+      <button id="electivo-1" class="course unlocked">Electivo I</button>
+      <button id="electivo-2" class="course unlocked">Electivo II</button>
+      <button id="electivo-3" class="course unlocked">Electivo III</button>
+      <button id="internado" class="course" data-prereq="clinica-exoticos,clinica-equinos,clinica-compania">Internado</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
